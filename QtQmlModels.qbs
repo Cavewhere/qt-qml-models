@@ -25,17 +25,15 @@ Project {
         Group {
             name: "C++ sources";
             files: [
-                "qqmlobjectlistmodel.cpp",
-                "qqmlvariantlistmodel.cpp",
+                "QQmlObjectListModel.cpp",
+                "QQmlVariantListModel.cpp",
             ]
         }
         Group {
             name: "C++ headers";
             files: [
-                "qqmlmodels.h",
-                "qqmlobjectlistmodel.h",
-                "qqmlvariantlistmodel.h",
-                "qqmlvariantlistmodel_p.h",
+                "QQmlObjectListModel.h",
+                "QQmlVariantListModel.h",
             ]
         }
         Group {

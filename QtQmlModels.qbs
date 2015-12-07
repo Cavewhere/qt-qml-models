@@ -4,7 +4,7 @@ Project {
     name: "Qt QML Models";
 
     Product {
-        name: "qt-qml-models";
+        name: "libqtqmltricks-qtqmlmodels";
         type: "staticlibrary";
         targetName: "QtQmlModels";
 

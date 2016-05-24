@@ -34,6 +34,7 @@ Project {
             files: [
                 "QQmlObjectListModel.h",
                 "QQmlVariantListModel.h",
+                "QtQmlTricksPlugin_SmartDataModels.h",
             ]
         }
         Group {

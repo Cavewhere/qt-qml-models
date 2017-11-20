@@ -7,11 +7,9 @@ Project {
         name: "libqtqmltricks-qtqmlmodels";
         type: "staticlibrary";
         targetName: "QtQmlModels";
-        cpp.cxxLanguageVersion: (Qt.core.versionMajor >= 5 && Qt.core.versionMinor >= 7 ? "c++11" : "c++98");
 
         Export {
             cpp.includePaths: ".";
-            cpp.cxxLanguageVersion: (Qt.core.versionMajor >= 5 && Qt.core.versionMinor >= 7 ? "c++11" : "c++98");
 
             Depends { name: "cpp"; }
             Depends {
@@ -25,7 +23,8 @@ Project {
                 submodules: ["core", "qml"];
         }
         Group {
-            name: "C++ sources";
+            name: "C++ template sources";
+            fileTags: ["txt"]
             files: [
                 "QQmlObjectListModel.cpp",
                 "QQmlVariantListModel.cpp",

@@ -192,7 +192,7 @@ public: // C++ API
         }
         return ret;
     }
-    int roleForName (const QByteArray & name) const {
+    Q_INVOKABLE int roleForName (const QByteArray & name) const {
         return m_roles.key (name, -1);
     }
     int count (void) const {

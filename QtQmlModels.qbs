@@ -27,7 +27,6 @@ Project {
             fileTags: ["txt"]
             files: [
                 "QQmlObjectListModel.cpp",
-                "QQmlVariantListModel.cpp",
                 "QQmlGadgetListModel.cpp"
             ]
         }
@@ -40,6 +39,13 @@ Project {
                 "QtQmlTricksPlugin_SmartDataModels.h",
             ]
         }
+        Group {
+            name: "C++ sources"
+            files: [
+                "QQmlVariantListModel.cpp",
+            ]
+        }
+
         Group {
             qbs.install: (product.type === "dynamiclibrary");
             fileTagsFilter: product.type;

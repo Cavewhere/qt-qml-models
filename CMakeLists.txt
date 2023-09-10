@@ -1,18 +1,26 @@
-cmake_minimum_required(VERSION 2.8.12)
-project(spatialite LANGUAGES C)
+cmake_minimum_required(VERSION 3.10)
+project(QtQmlModels)
 
-find_package(Qt5 COMPONENTS Core REQUIRED)
+# Add static library
+add_library(QtQmlModels STATIC)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Specify source files
+target_sources(QtQmlModels PRIVATE
+    QQmlObjectListModel.cpp
+    QQmlVariantListModel.cpp
+    QQmlGadgetListModel.cpp
+    QQmlObjectListModel.h
+    QQmlVariantListModel.h
+    QQmlGadgetListModel.h
+    QListQVariantHelpers.h
+    QtQmlTricksPlugin_SmartDataModels.h
+)
 
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
+# Specify include directories
+target_include_directories(QtQmlModels PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
-file(GLOB CPPSources *.cpp)
-file(GLOB HSources *.h)
+# Find Qt packages
+find_package(Qt5 COMPONENTS Core Qml REQUIRED)
 
-add_library(qt-qml-models STATIC ${CPPSources} ${HSources})
-target_include_directories(qt-qml-models PUBLIC ./)
-target_link_libraries(qt-qml-models PRIVATE Qt5::Core)
+# Add dependencies
+target_link_libraries(QtQmlModels PRIVATE Qt::Core Qt::Qml)

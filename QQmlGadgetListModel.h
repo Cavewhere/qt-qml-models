@@ -399,10 +399,10 @@ private: // data members
     QHash<QString, ItemType*>  m_indexByUid;
 };
 
-//#define QML_OBJMODEL_PROPERTY(type, name) \
-//    protected: Q_PROPERTY (QQmlGadgetListModelBase * name READ get_##name CONSTANT) \
-//    private: QQmlGadgetListModel<type> * m_##name; \
-//    public: QQmlGadgetListModel<type> * get_##name (void) const { return m_##name; } \
-//    private:
+#define QML_GADGETMODEL_PROPERTY(type, name) \
+    protected: Q_PROPERTY (QQmlGadgetListModelBase * name READ get_##name CONSTANT) \
+    private: QQmlGadgetListModel<type> * m_##name; \
+    public: QQmlGadgetListModel<type> * get_##name (void) const { return m_##name; } \
+    private:
 
 #endif // QQMLOBJECTLISTMODEL_H

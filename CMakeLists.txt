@@ -12,7 +12,7 @@ target_sources(QtQmlModels PRIVATE
     QQmlObjectListModel.h
     QQmlVariantListModel.h
     QQmlGadgetListModel.h
-    QListQVariantHelpers.h
+    QQmlQListVariantConverter.h
     QtQmlTricksPlugin_SmartDataModels.h
 )
 

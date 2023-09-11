@@ -4,6 +4,12 @@ project(QtQmlModels)
 # Add static library
 add_library(QtQmlModels STATIC)
 
+set_target_properties(QtQmlModels PROPERTIES
+    AUTOMOC ON
+    AUTORCC ON
+    AUTOUIC ON
+)
+
 # Specify source files
 target_sources(QtQmlModels PRIVATE
     QQmlObjectListModel.cpp

@@ -26,8 +26,8 @@ target_sources(QtQmlModels PRIVATE
 target_include_directories(QtQmlModels PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 # Find Qt packages
-find_package(Qt5 COMPONENTS Core Qml REQUIRED)
+find_package(Qt6 COMPONENTS Core Qml REQUIRED)
 
 # Add dependencies
 target_link_libraries(QtQmlModels PUBLIC
-    Qt5::Core Qt5::Qml)
+    Qt6::Core Qt6::Qml)
